@@ -1,0 +1,18 @@
+{
+  "name": "phase-1-array-map-method-lab",
+  "version": "1.0.0",
+  "description": "Lab project for practicing Array.prototype.map() — titleCased tutorial titles",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "jest --watchAll=false",
+    "start": "lite-server"
+  },
+  "keywords": ["javascript", "map", "lab", "tutorials"],
+  "author": "Sam-Safari",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^29.0.0",
+    "lite-server": "^2.6.1"
+  }
+}
