@@ -19,8 +19,3 @@ function titleCased() {
       .join(" ");
   });
 }
-
-module.exports = {
-  titleCased,
-  tutorials
-};
