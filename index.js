@@ -23,3 +23,38 @@ export function titleCased() {
       .join(" ");
   });
 }
+// --- DOM Integration ---
+const originalList = document.getElementById("original-list");
+const titlecasedList = document.getElementById("titlecased-list");
+const btnTitlecase = document.getElementById("btn-titlecase");
+const btnReset = document.getElementById("btn-reset");
+
+// Render original tutorials
+function renderOriginal() {
+  originalList.innerHTML = "";
+  tutorials.forEach(t => {
+    const li = document.createElement("li");
+    li.textContent = t;
+    originalList.appendChild(li);
+  });
+}
+
+// Render title-cased tutorials
+function renderTitlecased() {
+  titlecasedList.innerHTML = "";
+  titleCased().forEach(t => {
+    const li = document.createElement("li");
+    li.textContent = t;
+    titlecasedList.appendChild(li);
+  });
+}
+
+// Button events
+btnTitlecase?.addEventListener("click", renderTitlecased);
+btnReset?.addEventListener("click", () => {
+  titlecasedList.innerHTML = "";
+  renderOriginal();
+});
+
+// Initial render
+renderOriginal();
